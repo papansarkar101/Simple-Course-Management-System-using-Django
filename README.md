@@ -67,3 +67,11 @@ Once you're logged in, you can see this admin panel
 Only teachers are allowed to see this page
 
 <img width="1503" alt="Screenshot 2023-05-22 at 1 10 19 AM" src="https://github.com/papansarkar101/Simple-Course-Management-System-using-Django/assets/36565033/c70aa42a-0e6b-4a25-9bc8-961fb459d625">
+
+## All Available Courses
+
+<img width="1505" alt="Screenshot 2023-05-22 at 1 12 56 AM" src="https://github.com/papansarkar101/Simple-Course-Management-System-using-Django/assets/36565033/1ce97305-8e05-42c2-8d6b-50c0b917dbdb">
+
+
+## Enrolled Courses
+
