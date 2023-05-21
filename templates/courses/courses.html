@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>All Available Courses</h2>
+    <div class="row">
+        {% for course in all_courses %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+
+                    {% if user.user_type == 'student' %}
+                    <a href="{% url 'enroll_course' course.id %}" class="btn btn-primary">Enroll Now</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% if user.user_type == 'teacher' %}
+<hr>
+<div class="container mt-4">
+    <h2>My Courses</h2>
+    <div class="row">
+        {% for course in my_courses %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+
+                    <div class="mt-4">
+                        <h6>Enrolled Students - {{ course.title }}</h6>
+                        {% if course.enrollment_set.all %}
+                        <div>
+                            {% for enrollment in course.enrollment_set.all %}
+                            {{forloop.counter}}. {{ enrollment.student.username }} <br>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        <p>No students enrolled in this course yet.</p>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Enroll in Course</h2>
+    <div class="card">
+        <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ course.name }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+            {% if not enrolled %}
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Enroll</button>
+            </form>
+            {% else %}
+            <p class="text-success">You are already enrolled in this course.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
