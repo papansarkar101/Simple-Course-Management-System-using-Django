@@ -7,6 +7,9 @@
         {% for enrolled in enrolled_courses %}
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
+                {% if enrolled.course.image %}
+                <img src="{{ enrolled.course.image.url }}" class="card-img-top" alt="{{ enrolled.course.name }}">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ enrolled.course.name }}</h5>
                     <p class="card-text">{{ enrolled.course.description }}</p>
