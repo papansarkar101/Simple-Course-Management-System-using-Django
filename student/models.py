@@ -20,6 +20,7 @@ class CustomUser(AbstractUser):
 class Course(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
+    image = models.ImageField(upload_to='course_images/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     teacher = models.ForeignKey(CustomUser, on_delete=models.CASCADE)

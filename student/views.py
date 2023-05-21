@@ -65,7 +65,7 @@ def courses_view(request):
 @login_required(login_url='login')
 def create_course(request):
     if request.method == 'POST':
-        form = CourseForm(request.POST)
+        form = CourseForm(request.POST, request.FILES)
         if form.is_valid():
             course = form.save(commit=False)
             course.teacher = request.user  # Assign the teacher to the logged-in user

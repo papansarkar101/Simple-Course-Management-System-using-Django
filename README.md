@@ -31,7 +31,7 @@ $ python manage.py runserver
 * Register (Student or Teacher)
 * Log In
 * Log out
-* Add Courses (As a Teacher only)
+* Add Courses with Images (As a Teacher only)
 * View Courses
 * See Enrolled Courses
 * Enrollment

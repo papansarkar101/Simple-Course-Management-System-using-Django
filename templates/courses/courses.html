@@ -7,7 +7,9 @@
         {% for course in all_courses %}
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
-                <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.title }}">
+                {% if course.image %}
+                <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.name }}">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ course.name }}</h5>
                     <p class="card-text">{{ course.description }}</p>
@@ -30,6 +32,9 @@
         {% for course in my_courses %}
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
+                {% if course.image %}
+                <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.name }}">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ course.name }}</h5>
                     <p class="card-text">{{ course.description }}</p>
