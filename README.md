@@ -25,3 +25,13 @@ $ python manage.py migrate
 
 $ python manage.py runserver
 ```
+
+## Features
+
+* Register (Student or Teacher)
+* Log In
+* Log out
+* Add Courses (As a Teacher only)
+* View Courses
+* See Enrolled Courses
+* Enrollment
