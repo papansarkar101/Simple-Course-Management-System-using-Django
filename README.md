@@ -75,3 +75,5 @@ Only teachers are allowed to see this page
 
 ## Enrolled Courses
 
+<img width="1506" alt="Screenshot 2023-05-22 at 1 18 48 AM" src="https://github.com/papansarkar101/Simple-Course-Management-System-using-Django/assets/36565033/f865c256-8a71-47af-a2b6-ed057ddb4ce6">
+
