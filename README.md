@@ -9,7 +9,7 @@
 ## Installation
 
 ```
-$ git clone 
+$ git clone git@github.com:papansarkar101/Simple-Course-Management-System-using-Django.git
 
 $ cd course_management_g6781
 
